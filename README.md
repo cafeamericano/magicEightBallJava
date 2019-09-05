@@ -1,4 +1,4 @@
-# **Career Coach**
+# **Magic Eight Ball**
 
 ## Credits
 
