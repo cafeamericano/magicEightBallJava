@@ -22,7 +22,29 @@ public class Global {
     // VERIFY A QUESTION MARK APPEARS IN THE STRING
     static void testIfQuestion(String context) {
         int location = context.indexOf("?");
-        System.out.println(location);
+        if (location == -1) {
+            System.out.println("That wasn't a question!");
+        } else {
+            System.out.println("Hmmm... let me think about that.");
+            Random rand = new Random();
+            int n = rand.nextInt(5); 
+            //Respond based on random number
+            if (n == 0) {
+                System.out.println("Things are looking good.");
+            }
+            else if (n == 1) {
+                System.out.println("I'd say definitely.");
+            }
+            else if (n == 2) {
+                System.out.println("It's murky.");
+            }
+            else if (n == 3) {
+                System.out.println("Not looking so good.");
+            }
+            else if (n == 4) {
+                System.out.println("No way.");
+            }
+        }
     }
 
     // RUN PROGRAM #################################################################
