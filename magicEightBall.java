@@ -9,10 +9,40 @@ public class Global {
 
     // FUNCTIONS ##################################################################
 
+    // DRAW THE BALL
+    static void drawBasicBall() {
+        System.out.println("                                          ");
+        System.out.println("             ###############              ");
+        System.out.println("       ###########################        ");
+        System.out.println("     ################################     ");
+        System.out.println("  ######################################  ");
+        System.out.println(" ######################################## ");
+        System.out.println("##########################################");
+        System.out.println("#############               ##############");
+        System.out.println("#############     #####     ##############");
+        System.out.println("#############    ##   ##    ##############");
+        System.out.println("#############    #######    ##############");
+        System.out.println("#############    ##   ##    ##############");
+        System.out.println("#############     #####     ##############");
+        System.out.println("#############               ##############");
+        System.out.println("##########################################");
+        System.out.println(" ######################################## ");
+        System.out.println("  ######################################  ");
+        System.out.println("     ################################     ");
+        System.out.println("       ###########################        ");
+        System.out.println("             ###############              ");
+        System.out.println("                                          ");
+    }
+
+    static void addLineBreak() {
+        System.out.println("                                          ");
+    }
+
     // TAKE IN A QUESTION FROM THE USER
     static void gatherAndStoreInput() {
         Scanner myObj = new Scanner(System.in);
         System.out.println("I'm a magic eight ball. Ask me a question!");
+        System.out.println("                                          ");
 
         // String input
         String name = myObj.nextLine();
@@ -27,21 +57,17 @@ public class Global {
         } else {
             System.out.println("Hmmm... let me think about that.");
             Random rand = new Random();
-            int n = rand.nextInt(5); 
-            //Respond based on random number
+            int n = rand.nextInt(5);
+            // Respond based on random number
             if (n == 0) {
                 System.out.println("Things are looking good.");
-            }
-            else if (n == 1) {
+            } else if (n == 1) {
                 System.out.println("I'd say definitely.");
-            }
-            else if (n == 2) {
+            } else if (n == 2) {
                 System.out.println("It's murky.");
-            }
-            else if (n == 3) {
+            } else if (n == 3) {
                 System.out.println("Not looking so good.");
-            }
-            else if (n == 4) {
+            } else if (n == 4) {
                 System.out.println("No way.");
             }
         }
@@ -50,7 +76,9 @@ public class Global {
     // RUN PROGRAM #################################################################
 
     public static void main(String[] args) {
+        drawBasicBall();
         gatherAndStoreInput();
         testIfQuestion(Global.questionAskedByUser);
+        addLineBreak();
     }
 }
